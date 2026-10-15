@@ -1,0 +1,96 @@
+schema_version: sourcey.entity-authoring/v1alpha1
+entity:
+  entity_id: ent_01m4yj8gsygt1feqsvjmfg2vrp
+  slug: krispcall
+  slug_aliases: []
+  name: KrispCall
+  domains:
+    - value: krispcall.com
+      role: primary
+      valid_from: 2026-10-15T01:19:09.121Z
+  category: communication
+profile:
+  description: KrispCall provides cloud telephony with call management, monitoring, and analytics.
+  summary: KrispCall provides a cloud telephony platform for managing and monitoring business calls.
+  links:
+    site: https://krispcall.com/
+sources:
+  - source_id: src_05ce6fdbe9975def0a14eff9c56af2d3f31e9458f5cc0a13db17e6daa474d852
+    url: https://krispcall.com/krispcall-startup-elevate/
+  - source_id: src_8b5fb6510c4cc7ad4f3756c57c4e7b70072920e417c46dc2e3ae2f45d52a96c2
+    url: https://krispcall.com/legal/startup-elevate-program-terms/
+programs:
+  - program_id: prg_01m4yj8gt1c2na9r1mpx8fjt78
+    program_slug: startup-elevate
+    program_slug_aliases: []
+    title: KrispCall Startup Elevate
+    summary: KrispCall's Startup Elevate program provides eligible startups with temporary free platform access.
+    source_ids:
+      - src_05ce6fdbe9975def0a14eff9c56af2d3f31e9458f5cc0a13db17e6daa474d852
+      - src_8b5fb6510c4cc7ad4f3756c57c4e7b70072920e417c46dc2e3ae2f45d52a96c2
+offers:
+  - offer_id: off_01m4yj8gt1nwzwxgpweq52m835
+    program_id: prg_01m4yj8gt1c2na9r1mpx8fjt78
+    offer_slug: six-month-startup-access
+    offer_slug_aliases: []
+    title: Six months of KrispCall for up to five users
+    summary: Eligible startups receive six months of free KrispCall platform access for up to five users. Calling credit charges apply.
+    lifecycle:
+      status: active
+      effective_from: 2026-10-15T01:19:09.121Z
+    economics:
+      consideration:
+        kind: variable
+        description: Calling credits are charged separately. After the program, accounts transition to monthly Essential plan billing.
+      benefits:
+        - benefit_id: ben_platform_access
+          kind: free-service
+          description: All KrispCall platform features for up to five users.
+          service: KrispCall cloud telephony platform
+          duration:
+            kind: exact
+            value: P6M
+    eligibility:
+      rule:
+        kind: all
+        rules:
+          - criterion_id: cri_new_customer
+            kind: manual
+            statement: The startup must be a new KrispCall subscriber; current or prior paid users are ineligible.
+            reason: external-verification
+          - criterion_id: cri_employees
+            kind: manual
+            statement: The startup must have fewer than 50 employees.
+            reason: external-verification
+          - criterion_id: cri_accelerator
+            kind: manual
+            statement: The startup must participate in an accelerator or incubator program.
+            reason: external-verification
+          - criterion_id: cri_applicant_role
+            kind: manual
+            statement: The applicant must be a founder, C-level executive, or VP-level individual at the company.
+            reason: external-verification
+          - criterion_id: cri_company_presence
+            kind: manual
+            statement: The organization must have a public website and unique company email domain; generic email domains and stealth websites are excluded.
+            reason: external-verification
+          - criterion_id: cri_fraud_history
+            kind: manual
+            statement: The applicant and company must not have a history of implication in, or removal for, fraudulent activities.
+            reason: external-verification
+          - criterion_id: cri_approval
+            kind: manual
+            statement: KrispCall assesses eligibility and selects participants at its discretion.
+            reason: vendor-discretion
+    roles:
+      terms_authority_entity_id: ent_01m4yj8gsygt1feqsvjmfg2vrp
+      access_operator_entity_id: ent_01m4yj8gsygt1feqsvjmfg2vrp
+    access:
+      availability: public
+      method: form
+      url: https://krispcall.com/krispcall-startup-elevate/
+      instructions: Follow Apply Now and complete the startup application. KrispCall communicates the application status by email.
+    terms_url: https://krispcall.com/legal/startup-elevate-program-terms/
+    source_ids:
+      - src_05ce6fdbe9975def0a14eff9c56af2d3f31e9458f5cc0a13db17e6daa474d852
+      - src_8b5fb6510c4cc7ad4f3756c57c4e7b70072920e417c46dc2e3ae2f45d52a96c2
