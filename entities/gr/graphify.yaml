@@ -1,0 +1,86 @@
+schema_version: sourcey.entity-authoring/v1alpha1
+entity:
+  entity_id: ent_01m4yhg8ywr0zh7ynydrn0gwv8
+  slug: graphify
+  slug_aliases: []
+  name: Graphify
+  domains:
+    - value: graphify.com
+      role: primary
+      valid_from: 2026-10-15T01:05:54.655Z
+  category: devtools-other
+profile:
+  description: Graphify provides a codebase knowledge graph for engineers and coding agents, with shared repositories, pull request reviews, and formal verification.
+  summary: Graphify gives engineers and coding agents a shared codebase graph for queries, pull request reviews, and formal verification.
+  links:
+    site: https://graphify.com
+sources:
+  - source_id: src_f1973a5a8455c4f46839631bf216bdb0fd1bf12d304fbc491dc808c5bab4b122
+    url: https://graphify.com/startups
+  - source_id: src_abee443a804d47098b6f294066bd80387add06dd5f99a01f00dfaff0fbd00dce
+    url: https://graphify.com/pricing
+programs:
+  - program_id: prg_01m4yhg8yzt13ga30pcktmtz3n
+    program_slug: graphify-for-startups
+    program_slug_aliases: []
+    title: Graphify for Startups
+    summary: Graphify's startup program provides discounted Teams access to qualifying Pre-Seed and Seed companies.
+    source_ids:
+      - src_f1973a5a8455c4f46839631bf216bdb0fd1bf12d304fbc491dc808c5bab4b122
+offers:
+  - offer_id: off_01m4yhg8yzvjyh6gagzr1vnywg
+    program_id: prg_01m4yhg8yzt13ga30pcktmtz3n
+    offer_slug: teams-startup-discount
+    offer_slug_aliases: []
+    title: 50% off Graphify Teams for up to 6 months
+    summary: Approved Pre-Seed and Seed startups with under USD 1 million in revenue over the past 12 months receive 50% off Graphify Teams for up to 6 months. Teams requires at least 2 seats.
+    lifecycle:
+      status: active
+      effective_from: 2026-10-15T01:05:54.655Z
+    economics:
+      consideration:
+        kind: unknown
+        description: The sources establish a paid Teams subscription with at least 2 seats, but do not state separate consideration for the startup discount.
+      benefits:
+        - benefit_id: ben_01
+          kind: discount
+          description: 50% off the Graphify Teams plan for up to 6 months.
+          applies_to: Graphify Teams plan
+          percentage:
+            kind: exact
+            basis_points: 5000
+          duration:
+            kind: up-to
+            value: P6M
+    eligibility:
+      rule:
+        kind: all
+        rules:
+          - criterion_id: cri_01
+            kind: manual
+            statement: The applicant must be a Pre-Seed or Seed startup.
+            reason: external-verification
+          - criterion_id: cri_02
+            kind: manual
+            statement: Revenue over the past 12 months must be less than USD 1,000,000.
+            reason: external-verification
+          - criterion_id: cri_03
+            kind: manual
+            statement: Teams requires at least 2 seats.
+            reason: not-machine-evaluable
+          - criterion_id: cri_04
+            kind: manual
+            statement: Graphify reviews the startup application and replies by email.
+            reason: vendor-discretion
+    roles:
+      terms_authority_entity_id: ent_01m4yhg8ywr0zh7ynydrn0gwv8
+      access_operator_entity_id: ent_01m4yhg8ywr0zh7ynydrn0gwv8
+    access:
+      availability: public
+      method: form
+      url: https://graphify.com/startups
+      instructions: Submit the startup form with company name, website, work email, role, team size, funding stage, and revenue in USD over the past 12 months; confirm the revenue limit. Graphify reviews the application and replies by email.
+    terms_url: https://graphify.com/startups
+    source_ids:
+      - src_f1973a5a8455c4f46839631bf216bdb0fd1bf12d304fbc491dc808c5bab4b122
+      - src_abee443a804d47098b6f294066bd80387add06dd5f99a01f00dfaff0fbd00dce
