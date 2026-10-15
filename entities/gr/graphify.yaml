@@ -39,8 +39,8 @@ offers:
       effective_from: 2026-10-15T01:05:54.655Z
     economics:
       consideration:
-        kind: unknown
-        description: The sources establish a paid Teams subscription with at least 2 seats, but do not state separate consideration for the startup discount.
+        kind: variable
+        description: A paid Graphify Teams subscription with at least 2 seats is required; the amount varies with seat count and billing interval.
       benefits:
         - benefit_id: ben_01
           kind: discount
